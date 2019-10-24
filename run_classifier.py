@@ -280,7 +280,7 @@ class ContextualExpansionProcessor(DataProcessor):
       # Only the test set has a header
       if set_type == "test" and i == 0:
         continue
-      guid = "%s-%s" % (set_type, i)
+      guid = "%s-%s" % (line[0], i)
       if set_type == "test":
         text_a = tokenization.convert_to_unicode(line[1])
         text_b = tokenization.convert_to_unicode(line[2])
